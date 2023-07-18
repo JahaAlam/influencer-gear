@@ -1,5 +1,5 @@
 /*share styles*/
-body {
+* {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -10,6 +10,7 @@ body {
     font-weight: 600;
 
 }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -17,9 +18,7 @@ body {
 
 /* header styles*/
 
-header {
-
-}
+header {}
 
 .nav-container {
     display: flex;
@@ -57,7 +56,7 @@ header {
 
 .header-text {
     color: #3A3A3A;
-    font-size: 52px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 16px;
 }
@@ -72,7 +71,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     background: #E02C6D;
     text-align: center;
     width: 200px;
@@ -87,23 +86,122 @@ button {
     padding: 10px;
     border-radius: 41px
 }
-img{
+
+img {
     background-image: url('../images/Circle\ design.svg');
 }
 
 /*brand*/
 
-.brand{
+.brand {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin:100px 220px;
+    margin: 100px 220px;
     gap: 20px;
 }
 
+/* populer collection*/
 
+.container {
+    margin-top: 200px;
+}
 
+.collection-title {
+    color: #3A3A3A;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 70px;
+    text-align: center;
+    margin: 20px;
+}
+
+.collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 220px;
+}
+
+.card {
+    width: 329px;
+    height: 476px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+
+}
+
+img {
+    align-items: center;
+    padding: 15px;
+}
+
+.card-title {
+    color: #18191F;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    padding-left: 15px;
+}
+
+.card .price {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    padding-left: 15px;
+}
+
+.details {
+    color: #787885;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 143%;
+    letter-spacing: 0.252px;
+    padding-left: 15px;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 180px;
+    gap: 50px;
+}
+
+.feature-title {
+    color: #0A0826;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.feature-details {
+    color: #6C6C6C;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #0A0826;
+    text-align: center;
+    height: 239px;
+    color: white;
+}
+
+.footer-container {
+    margin-top: 200px;
+}
+
+.footer-title {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 70px;
+}
 
 
 
@@ -113,30 +211,42 @@ img{
 /*media query*/
 /* mobile medium*/
 @media screen and (max-width: 776px) {
+
     .nav-container,
     .nav-container ul,
-    .header-container
-    
-    {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .header-container
-    {
-        flex-direction:column-reverse;
-        text-align: center;
-    }
-    .header-text
-    {
-        text-align: center;
-        margin-top: 70px;
-        font-size: 10px;
-    }
+    .header-container,
 
-    button{
+    {
+    flex-direction: column;
+    justify-content: center;
+}
 
-        gap: 10px;
-    }
+.header-container,
+.feature {
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.header-text {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 10px;
+}
+
+button {
+
+    gap: 10px;
+}
+
+.collection {
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.feature-details {
+    font-size: 16px;
+    text-align: center;
+}
 
 
 }
